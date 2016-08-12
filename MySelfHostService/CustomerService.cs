@@ -8,15 +8,15 @@ namespace MySelfHostService
         /// 
         /// Lista de clientes
         /// 
-        List customers = new List();
+        List<Customer> customers = new List<Customer>();
 
         /// 
         /// Método construtor
         /// Carrega os clientes
         /// 
         public CustomerService()
-        {
-            for (int i = 1; i
+        { }
+
         /// Implementação do método CreateCustomer
         /// Cria um novo cliente e retorna o mesmo
         /// 

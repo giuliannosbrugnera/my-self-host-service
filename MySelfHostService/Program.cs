@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ServiceModel;
 
 namespace MySelfHostService
 {
@@ -10,6 +7,12 @@ namespace MySelfHostService
     {
         static void Main(string[] args)
         {
+            ServiceHost host = new ServiceHost(typeof(CustomerService), new Uri[] { });
+            host.Open();
+            Console.WriteLine("Serviço rodando...");
+            Console.WriteLine("Tecle para finalizar.");
+            Console.ReadKey();
+            host.Close();
         }
     }
 }
